@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abundus Wealth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .feature-box {
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Abundus Wealth<br/>Fintech Solutions<br/>Providers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Futures</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cogs"></i> Options</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-lightbulb"></i> Strategies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i> Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-industry"></i> Sector</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-th"></i> Subsector</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-sitemap"></i> Classification</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   <!-- Stock Market Quote Section -->
+<div class="container my-4">
+    <div class="bg-light border-start border-4 border-primary shadow-lg rounded p-4 text-center mx-auto" style="max-width: 800px;">
+        <i class="fas fa-quote-left fa-2x text-primary"></i>
+        <p class="fw-bold fst-italic text-dark mt-2">"The stock market is filled with individuals who know the price of everything, but the value of nothing." – Philip Fisher</p>
+        <i class="fas fa-quote-right fa-2x text-primary"></i>
+    </div>
+</div>
+    <!-- Features Section -->
+    <div class="container my-5" id="features">
+        <div class="row">
+            <div class="col-md-4 feature-box">
+                <h3>NIFTY</h3>
+                <canvas id="chart1"></canvas>
+            </div>
+            <div class="col-md-4 feature-box">
+                <h3>NIFTY BANK</h3>
+                <canvas id="chart2"></canvas>
+            </div>
+            <div class="col-md-4 feature-box">
+                <h3>SENSEX</h3>
+                <canvas id="chart3"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row">
+            <!-- Top Gainers -->
+            <div class="col-md-6">
+                <div class="card border-success shadow">
+                    <div class="card-header bg-success text-white text-center">
+                        <h5>📈 Top Gainers</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Stock</th>
+                                    <th>Price</th>
+                                    <th>Change (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>$180</td>
+                                    <td class="text-success">+5.2%</td>
+                                </tr>
+                                <tr>
+                                    <td>Amazon</td>
+                                    <td>$120</td>
+                                    <td class="text-success">+3.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>Google</td>
+                                    <td>$2300</td>
+                                    <td class="text-success">+2.9%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Top Losers -->
+            <div class="col-md-6">
+                <div class="card border-danger shadow">
+                    <div class="card-header bg-danger text-white text-center">
+                        <h5>📉 Top Losers</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Stock</th>
+                                    <th>Price</th>
+                                    <th>Change (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Meta</td>
+                                    <td>$290</td>
+                                    <td class="text-danger">-4.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>Tesla</td>
+                                    <td>$750</td>
+                                    <td class="text-danger">-3.5%</td>
+                                </tr>
+                                <tr>
+                                    <td>NVIDIA</td>
+                                    <td>$520</td>
+                                    <td class="text-danger">-2.7%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Market Data -->
+        <!-- <div class="card mt-4 shadow">
+            <div class="card-header bg-dark text-white text-center">
+                <h5>📊 Market Summary</h5>
+            </div>
+            <div class="card-body text-center">
+                <p><strong>S&P 500:</strong> 4,200 (+1.2%) | <strong>NASDAQ:</strong> 13,900 (+0.8%)</p>
+                <p><strong>Crude Oil:</strong> $85.50 | <strong>Gold:</strong> $1,950</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- Our Picks for the day/week -->
+    <div class="container my-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white text-center">
+                <h5>📊 Our Picks for the Day/Week</h5>
+            </div>
+            <div class="card-body">
+                <p class="text-center">These are the top Futures & Options (F&O) stocks for the day/week based on Open Interest (OI) data and technical analysis.</p>
+    
+                <!-- Table Preview -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Stock</th>
+                                <th>Current Price</th>
+                                <th>Change (%)</th>
+                                <th>OI Change (%)</th>
+                                <th>Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reliance</td>
+                                <td>₹2,500</td>
+                                <td class="text-success">+2.1%</td>
+                                <td class="text-success">+5.8%</td>
+                                <td>15M</td>
+                            </tr>
+                            <tr>
+                                <td>TCS</td>
+                                <td>₹3,600</td>
+                                <td class="text-danger">-1.3%</td>
+                                <td class="text-danger">-4.2%</td>
+                                <td>10M</td>
+                            </tr>
+                            <tr>
+                                <td>Infosys</td>
+                                <td>₹1,750</td>
+                                <td class="text-success">+1.7%</td>
+                                <td class="text-success">+3.5%</td>
+                                <td>12M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <!-- Download Buttons -->
+                <div class="text-center mt-3">
+                    <a href="reports/fno_daily_report.xlsx" class="btn btn-success me-2">
+                        <i class="fas fa-file-excel"></i> Download Excel
+                    </a>
+                    <a href="reports/fno_daily_report.pdf" class="btn btn-danger">
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white text-center">
+                <h5>💻 Software Services Provided</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <!-- Service 1 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-chart-line fa-3x text-primary"></i>
+                        <h5 class="mt-3">Market Analysis Tools</h5>
+                        <p>Get real-time stock data, technical analysis, and AI-powered market insights.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-robot fa-3x text-success"></i>
+                        <h5 class="mt-3">Algorithmic Trading</h5>
+                        <p>Automate trading strategies with our AI-driven algorithmic trading solutions.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-database fa-3x text-danger"></i>
+                        <h5 class="mt-3">Data & API Solutions</h5>
+                        <p>Access high-frequency market data and integrate APIs for real-time insights.</p>
+                    </div>
+                </div>
+    
+                <div class="row mt-4">
+                    <!-- Service 4 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-cloud fa-3x text-warning"></i>
+                        <h5 class="mt-3">Cloud-Based Trading Platforms</h5>
+                        <p>Access trading platforms from anywhere with our secure cloud-based solutions.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-mobile-alt fa-3x text-secondary"></i>
+                        <h5 class="mt-3">Mobile Trading Apps</h5>
+                        <p>Trade on the go with our fully customized mobile trading applications.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-cogs fa-3x text-dark"></i>
+                        <h5 class="mt-3">Custom Software Development</h5>
+                        <p>Get tailored software solutions to meet your specific trading and investment needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white text-center">
+                <h5>📈 Trading Strategies & Custom Development</h5>
+            </div>
+            <div class="card-body">
+                <p class="text-center">We develop automated and semi-automated trading strategies based on your specific requirements in various programming languages.</p>
+                <div class="row">
+                    <!-- Python Strategies -->
+                    <div class="col-md-4 text-center">
+                        <i class="fab fa-python fa-3x text-warning"></i>
+                        <h5 class="mt-3">Python Strategies</h5>
+                        <p>Data-driven trading strategies using AI, ML, and broker APIs.</p>
+                    </div>
+                    <!-- Pine Script -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-chart-bar fa-3x text-primary"></i>
+                        <h5 class="mt-3">Pine Script (TradingView)</h5>
+                        <p>Custom indicators and strategies for TradingView charts.</p>
+                    </div>
+                    <!-- MQL4 / MQL5 -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-robot fa-3x text-info"></i>
+                        <h5 class="mt-3">MQL4 / MQL5</h5>
+                        <p>Automated trading bots and indicators for MetaTrader platforms.</p>
+                    </div>
+                </div>
+    
+                <div class="row mt-4">
+                    <!-- VBA Scripting -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-file-excel fa-3x text-success"></i>
+                        <h5 class="mt-3">VBA Scripting</h5>
+                        <p>Excel-based trading automation and backtesting solutions.</p>
+                    </div>
+                    <!-- User Custom Requests -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-user-cog fa-3x text-dark"></i>
+                        <h5 class="mt-3">Custom Strategies</h5>
+                        <p>We develop strategies based on your specific requirements.</p>
+                    </div>
+                    <!-- Contact Us -->
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-envelope fa-3x text-danger"></i>
+                        <h5 class="mt-3">Contact Us</h5>
+                        <p>Request a strategy or consultation for your trading needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white text-center">
+            <h5>📊 Market & Sector Reports</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-center">Stay informed with our real-time analysis and reports on market conditions and sector trends.</p>
+            
+            <div class="row">
+                <!-- Market Conditions -->
+                <div class="col-md-6">
+                    <div class="card border-info">
+                        <div class="card-header bg-info text-white text-center">
+                            <h6>📉 Market Condition Reports</h6>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Daily & Weekly Market Summary</li>
+                                <li>Volatility & Liquidity Analysis</li>
+                                <li>Economic & Interest Rate Impact</li>
+                                <li>Global Market Influence</li>
+                            </ul>
+                            <a href="#" class="btn btn-info btn-sm w-100"><i class="fas fa-download"></i> Download Reports</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sector Reports -->
+                <div class="col-md-6">
+                    <div class="card border-success">
+                        <div class="card-header bg-success text-white text-center">
+                            <h6>🏭 Sector-Specific Reports</h6>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Technology & IT Sector Analysis</li>
+                                <li>Banking & Finance Reports</li>
+                                <li>Pharma & Healthcare Insights</li>
+                                <li>Auto, FMCG, and Energy Trends</li>
+                            </ul>
+                            <a href="#" class="btn btn-success btn-sm w-100"><i class="fas fa-download"></i> Download Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-dark"><i class="fas fa-envelope"></i> Request a Custom Report</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-4">
+                <h5>About Abundus Wealth</h5>
+                <p>Abundus Wealth is a leading fintech solutions provider offering insights, strategies, and tools for stock market investors and traders.</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Market Overview</a></li>
+                    <li><a href="#">Trading Strategies</a></li>
+                    <li><a href="#">Investment Reports</a></li>
+                    <li><a href="#">Stock Screener</a></li>
+                    <li><a href="#">Financial News</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p><i class="fas fa-envelope"></i> support@abunduswealth.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Wall Street, New York, USA</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-4 border-light">
+        
+        <div class="text-center">
+            <p>&copy; 2025 Abundus Wealth. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function createChart(canvasId) {
+    const ctx = document.getElementById(canvasId).getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Stock Price',
+                data: [100, 120, 90, 130, 150, 140],
+                borderColor: 'rgba(255, 99, 132, 1)', // Bright Red
+                backgroundColor: 'rgba(255, 99, 132, 0.5)', // Light Red Fill
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false // Hide legend for simplicity
+                }
+            },
+            scales: {
+                x: { 
+                    grid: { display: false } 
+                },
+                y: { 
+                    grid: { display: true, color: 'rgba(200, 200, 200, 0.5)' } 
+                }
+            }
+        }
+    });
+}
+
+// Creating charts for different sections
+createChart('chart1');
+createChart('chart2');
+createChart('chart3');
+
+    </script>
+</body>
+</html>
