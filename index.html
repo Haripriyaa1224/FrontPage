@@ -8,6 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+    
+    /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    } */
         .feature-box {
             padding: 20px;
             text-align: center;
@@ -22,41 +29,53 @@
             width: 100% !important;
             height: auto !important;
         }
+        .navbar-nav .nav-link {
+    color: blue !important;
+}
+
+.navbar-nav .nav-link i {
+    color: yellow !important;
+}
+
     </style>
 </head>
-<body>
+<body class="bg-dark text-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Abundus Wealth<br/>Fintech Solutions<br/>Providers</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg" style="background-color: #121212;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./13812.png" alt="Abundus Wealth Logo" height="50" width="100">
+            </a>
+            
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Futures</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cogs"></i> Options</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-lightbulb"></i> Strategies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i> Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-industry"></i> Sector</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-th"></i> Subsector</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-sitemap"></i> Classification</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-chart-line text-warning"></i> Futures</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-cogs text-warning"></i> Options</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-file-alt text-warning"></i> Reports</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-lightbulb text-warning"></i> Strategies</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-project-diagram text-warning"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-blog text-warning"></i> Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-industry text-warning"></i> Sector</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-th text-warning"></i> Subsector</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-sitemap text-warning"></i> Classification</a></li>
                 </ul>
             </div>
+            
         </div>
     </nav>
    <!-- Stock Market Quote Section -->
-<div class="container my-4">
-    <div class="bg-light border-start border-4 border-primary shadow-lg rounded p-4 text-center mx-auto" style="max-width: 800px;">
+<div class="container-fluid my-4">
+    <div class="bg-light border-start border-4 border-primary shadow-lg rounded-5 p-4 text-center mx-auto" style="max-width: 800px;">
         <i class="fas fa-quote-left fa-2x text-primary"></i>
         <p class="fw-bold fst-italic text-dark mt-2">"The stock market is filled with individuals who know the price of everything, but the value of nothing." – Philip Fisher</p>
         <i class="fas fa-quote-right fa-2x text-primary"></i>
     </div>
 </div>
     <!-- Features Section -->
-    <div class="container my-5" id="features">
+    <div class="container-fluid my-5" id="features">
         <div class="row">
             <div class="col-md-4 feature-box">
                 <h3>NIFTY</h3>
@@ -73,12 +92,12 @@
         </div>
     </div>
     
-    <div class="container my-5">
+    <div class="container-fluid my-5">
         <div class="row">
             <!-- Top Gainers -->
             <div class="col-md-6">
-                <div class="card border-success shadow">
-                    <div class="card-header bg-success text-white text-center">
+                <div class="card border-success shadow rounded-4">
+                    <div class="card-header bg-success text-white text-center rounded-top-4">
                         <h5>📈 Top Gainers</h5>
                     </div>
                     <div class="card-body">
@@ -114,8 +133,8 @@
     
             <!-- Top Losers -->
             <div class="col-md-6">
-                <div class="card border-danger shadow">
-                    <div class="card-header bg-danger text-white text-center">
+                <div class="card border-danger shadow rounded-4">
+                    <div class="card-header bg-danger text-white text-center rounded-top-4">
                         <h5>📉 Top Losers</h5>
                     </div>
                     <div class="card-body">
@@ -162,9 +181,9 @@
         </div>
     </div> -->
     <!-- Our Picks for the day/week -->
-    <div class="container my-5">
-        <div class="card shadow">
-            <div class="card-header bg-primary text-white text-center">
+    <div class="container-fluid my-5">
+        <div class="card shadow rounded-4">
+            <div class="card-header bg-primary text-white text-center rounded-top-4">
                 <h5>📊 Our Picks for the Day/Week</h5>
             </div>
             <div class="card-body">
@@ -173,7 +192,7 @@
                 <!-- Table Preview -->
                 <div class="table-responsive">
                     <table class="table table-bordered">
-                        <thead class="table-dark">
+                        <thead class="table-success">
                             <tr>
                                 <th>Stock</th>
                                 <th>Current Price</th>
@@ -210,10 +229,10 @@
     
                 <!-- Download Buttons -->
                 <div class="text-center mt-3">
-                    <a href="reports/fno_daily_report.xlsx" class="btn btn-success me-2">
+                    <a href="reports/fno_daily_report.xlsx" class="btn btn-outline-primary">
                         <i class="fas fa-file-excel"></i> Download Excel
                     </a>
-                    <a href="reports/fno_daily_report.pdf" class="btn btn-danger">
+                    <a href="reports/fno_daily_report.pdf" class="btn btn-outline-primary">
                         <i class="fas fa-file-pdf"></i> Download PDF
                     </a>
                 </div>
@@ -221,9 +240,9 @@
         </div>
     </div>
 
-    <div class="container my-5">
-        <div class="card shadow">
-            <div class="card-header bg-info text-white text-center">
+    <div class="container-fluid my-5">
+        <div class="card shadow rounded-4">
+            <div class="card-header bg-primary text-white text-center rounded-top-4">
                 <h5>💻 Software Services Provided</h5>
             </div>
             <div class="card-body">
@@ -272,9 +291,9 @@
         </div>
     </div>
     
-    <div class="container my-5">
-        <div class="card shadow">
-            <div class="card-header bg-success text-white text-center">
+    <div class="container-fluid my-5">
+        <div class="card shadow rounded-4">
+            <div class="card-header bg-primary text-white text-center rounded-top-4">
                 <h5>📈 Trading Strategies & Custom Development</h5>
             </div>
             <div class="card-body">
@@ -324,9 +343,9 @@
         </div>
     </div>
 
-    <div class="container my-5">
-    <div class="card shadow">
-        <div class="card-header bg-primary text-white text-center">
+    <div class="container-fluid my-5">
+    <div class="card shadow rounded-4">
+        <div class="card-header bg-primary text-white text-center rounded-top-4">
             <h5>📊 Market & Sector Reports</h5>
         </div>
         <div class="card-body">
@@ -346,7 +365,7 @@
                                 <li>Economic & Interest Rate Impact</li>
                                 <li>Global Market Influence</li>
                             </ul>
-                            <a href="#" class="btn btn-info btn-sm w-100"><i class="fas fa-download"></i> Download Reports</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100"><i class="fas fa-download"></i> Download Reports</a>
                         </div>
                     </div>
                 </div>
@@ -354,7 +373,7 @@
                 <!-- Sector Reports -->
                 <div class="col-md-6">
                     <div class="card border-success">
-                        <div class="card-header bg-success text-white text-center">
+                        <div class="card-header bg-info text-white text-center">
                             <h6>🏭 Sector-Specific Reports</h6>
                         </div>
                         <div class="card-body">
@@ -364,14 +383,14 @@
                                 <li>Pharma & Healthcare Insights</li>
                                 <li>Auto, FMCG, and Energy Trends</li>
                             </ul>
-                            <a href="#" class="btn btn-success btn-sm w-100"><i class="fas fa-download"></i> Download Reports</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100"><i class="fas fa-download"></i> Download Reports</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-dark"><i class="fas fa-envelope"></i> Request a Custom Report</a>
+                <a href="#" class="btn btn-outline-dark"><i class="fas fa-envelope"></i> Request a Custom Report</a>
             </div>
         </div>
     </div>
@@ -379,8 +398,8 @@
 
     
     <!-- Footer -->
-<footer class="footer">
-    <div class="container">
+<footer class="footer w-100 bg-dark text-white p-3 m-0">
+    <div class="container-fluid">
         <div class="row">
             <!-- About Section -->
             <div class="col-md-4">
@@ -434,8 +453,8 @@
             datasets: [{
                 label: 'Stock Price',
                 data: [100, 120, 90, 130, 150, 140],
-                borderColor: 'rgba(255, 99, 132, 1)', // Bright Red
-                backgroundColor: 'rgba(255, 99, 132, 0.5)', // Light Red Fill
+                borderColor: '#00BFFF',  // Neon Blue (High contrast on dark theme)
+                backgroundColor: 'rgba(0, 191, 255, 0.2)',  // Light Blue fill
                 borderWidth: 3,
                 fill: true,
                 tension: 0.4
@@ -445,20 +464,23 @@
             responsive: true,
             plugins: {
                 legend: {
-                    display: false // Hide legend for simplicity
+                    display: false  // Hide legend for simplicity
                 }
             },
             scales: {
                 x: { 
-                    grid: { display: false } 
+                    grid: { display: false },
+                    ticks: { color: '#FFFFFF' } // White text for readability
                 },
                 y: { 
-                    grid: { display: true, color: 'rgba(200, 200, 200, 0.5)' } 
+                    grid: { display: true, color: 'rgba(255, 255, 255, 0.2)' }, // Light white grid
+                    ticks: { color: '#FFFFFF' } // White text for readability
                 }
             }
         }
     });
 }
+
 
 // Creating charts for different sections
 createChart('chart1');
