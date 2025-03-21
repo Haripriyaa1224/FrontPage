@@ -15,6 +15,20 @@
     box-sizing: border-box;
     width: 100%;
     } */
+
+     /* Neon Color Variables */
+     :root {
+            --neon-green: #39ff14;
+            --neon-blue: #00eaff;
+            --neon-purple: #bb00ff;
+            --neon-pink: #ff007f;
+            --neon-yellow: #fdfc00;
+            --dark-bg: #121212;
+        }
+
+        .text-neon-green {
+            color: var(--neon-green);
+        }
         .feature-box {
             padding: 20px;
             text-align: center;
@@ -47,33 +61,26 @@
                 <img src="./13812.png" alt="Abundus Wealth Logo" height="50" width="100">
             </a>
             
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="color: white; border-color: white;">
+                <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-chart-line text-warning"></i> Futures</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-cogs text-warning"></i> Options</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-file-alt text-warning"></i> Reports</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-lightbulb text-warning"></i> Strategies</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-project-diagram text-warning"></i> Projects</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-blog text-warning"></i> Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-industry text-warning"></i> Sector</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-th text-warning"></i> Subsector</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary" href="#"><i class="fas fa-sitemap text-warning"></i> Classification</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-chart-line text-white"></i> Futures</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-cogs text-white"></i> Options</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-file-alt text-white"></i> Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-lightbulb text-white"></i> Strategies</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-project-diagram text-white"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-blog text-white"></i> Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-industry text-white"></i> Sector</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-th text-white"></i> Subsector</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white !important" href="#"><i class="fas fa-sitemap text-white"></i> Classification</a></li>
                 </ul>
             </div>
             
         </div>
     </nav>
-   <!-- Stock Market Quote Section -->
-<div class="container-fluid my-4">
-    <div class="bg-light border-start border-4 border-primary shadow-lg rounded-5 p-4 text-center mx-auto" style="max-width: 800px;">
-        <i class="fas fa-quote-left fa-2x text-primary"></i>
-        <p class="fw-bold fst-italic text-dark mt-2">"The stock market is filled with individuals who know the price of everything, but the value of nothing." – Philip Fisher</p>
-        <i class="fas fa-quote-right fa-2x text-primary"></i>
-    </div>
-</div>
+  
     <!-- Features Section -->
     <div class="container-fluid my-5" id="features">
         <div class="row">
@@ -96,12 +103,12 @@
         <div class="row">
             <!-- Top Gainers -->
             <div class="col-md-6">
-                <div class="card border-success shadow rounded-4">
-                    <div class="card-header bg-success text-white text-center rounded-top-4">
+                <div class="card border-secondary shadow rounded-4 bg-dark text-white">
+                    <div class="card-header bg-secondary text-white text-center rounded-top-4">
                         <h5>📈 Top Gainers</h5>
                     </div>
                     <div class="card-body">
-                        <table class="table table-hover">
+                        <table class="table table-dark table-hover">
                             <thead>
                                 <tr>
                                     <th>Stock</th>
@@ -133,12 +140,12 @@
     
             <!-- Top Losers -->
             <div class="col-md-6">
-                <div class="card border-danger shadow rounded-4">
-                    <div class="card-header bg-danger text-white text-center rounded-top-4">
+                <div class="card border-secondary shadow rounded-4 bg-dark text-white">
+                    <div class="card-header bg-secondary text-white text-center rounded-top-4">
                         <h5>📉 Top Losers</h5>
                     </div>
                     <div class="card-body">
-                        <table class="table table-hover">
+                        <table class="table table-dark table-hover">
                             <thead>
                                 <tr>
                                     <th>Stock</th>
@@ -395,7 +402,14 @@
         </div>
     </div>
 </div>
-
+ <!-- Stock Market Quote Section -->
+ <div class="container-fluid my-4">
+    <div class="bg-light border-start border-4 border-primary shadow-lg rounded-5 p-4 text-center mx-auto" style="max-width: 800px;">
+        <i class="fas fa-quote-left fa-2x text-primary"></i>
+        <p class="fw-bold fst-italic text-dark mt-2">"The stock market is filled with individuals who know the price of everything, but the value of nothing." – Philip Fisher</p>
+        <i class="fas fa-quote-right fa-2x text-primary"></i>
+    </div>
+</div>
     
     <!-- Footer -->
 <footer class="footer w-100 bg-dark text-white p-3 m-0">
