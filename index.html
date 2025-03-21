@@ -19,15 +19,21 @@
      /* Neon Color Variables */
      :root {
             --neon-green: #39ff14;
+            --neon-red: #ff073a;
             --neon-blue: #00eaff;
             --neon-purple: #bb00ff;
             --neon-pink: #ff007f;
             --neon-yellow: #fdfc00;
             --dark-bg: #121212;
+        
         }
 
         .text-neon-green {
-            color: var(--neon-green);
+            color: var(--neon-green) !important;
+        }
+
+        .text-neon-red{
+            color: var(--neon-red) !important;
         }
         .feature-box {
             padding: 20px;
@@ -120,17 +126,17 @@
                                 <tr>
                                     <td>Apple</td>
                                     <td>$180</td>
-                                    <td class="text-success">+5.2%</td>
+                                    <td class="text-neon-green">+5.2%</td>
                                 </tr>
                                 <tr>
                                     <td>Amazon</td>
                                     <td>$120</td>
-                                    <td class="text-success">+3.8%</td>
+                                    <td class="text-neon-green">+3.8%</td>
                                 </tr>
                                 <tr>
                                     <td>Google</td>
                                     <td>$2300</td>
-                                    <td class="text-success">+2.9%</td>
+                                    <td class="text-neon-green">+2.9%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -157,17 +163,17 @@
                                 <tr>
                                     <td>Meta</td>
                                     <td>$290</td>
-                                    <td class="text-danger">-4.1%</td>
+                                    <td class="text-neon-red">-4.1%</td>
                                 </tr>
                                 <tr>
                                     <td>Tesla</td>
                                     <td>$750</td>
-                                    <td class="text-danger">-3.5%</td>
+                                    <td class="text-neon-red">-3.5%</td>
                                 </tr>
                                 <tr>
                                     <td>NVIDIA</td>
                                     <td>$520</td>
-                                    <td class="text-danger">-2.7%</td>
+                                    <td class="text-neon-red">-2.7%</td>
                                 </tr>
                             </tbody>
                         </table>
